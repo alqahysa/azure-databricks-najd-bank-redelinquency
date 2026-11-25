@@ -16,7 +16,6 @@ resources:
         - task_key: bronze_products
           notebook_task:
             notebook_path: ../bronze/products_raw_data_ingestion.py
-            source: WORKSPACE
         - task_key: bronze_repayments
           notebook_task:
             notebook_path: ../bronze/repayments_raw_data_ingestion.py
