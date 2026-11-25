@@ -1,0 +1,16 @@
+branch_id,branch_name,city,region,staff_count
+BR001,Riyadh Olaya,Riyadh,Riyadh,42
+BR002,Riyadh Al Malaz,Riyadh,Riyadh,28
+BR003,Riyadh King Fahd Road,Riyadh,Riyadh,35
+BR004,Jeddah Tahlia,Jeddah,Makkah,38
+BR005,Jeddah Al Hamra,Jeddah,Makkah,26
+BR006,Jeddah Al Safa,Jeddah,Makkah,22
+BR007,Makkah Al Aziziyah,Makkah,Makkah,24
+BR008,Makkah Al Awali,Makkah,Makkah,18
+BR009,Madinah Quba,Madinah,Madinah,21
+BR010,Madinah Central,Madinah,Madinah,25
+BR011,Dammam Al Faisaliyah,Dammam,Eastern Province,30
+BR012,Dammam Al Shatea,Dammam,Eastern Province,19
+BR013,Khobar Corniche,Khobar,Eastern Province,27
+BR014,Abha Al Manhal,Abha,Asir,16
+BR015,Tabuk Al Muruj,Tabuk,Tabuk,14
