@@ -5,7 +5,7 @@
 # ///
 # MAGIC %md
 # MAGIC ## Bronze Layer
-# MAGIC ##### branches feed -> banking.bronze.cbs_branch
+# MAGIC ###### branches feed -> banking.bronze.cbs_branch
 
 # COMMAND ----------
 

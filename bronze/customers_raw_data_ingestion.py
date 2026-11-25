@@ -5,7 +5,7 @@
 # ///
 # MAGIC %md
 # MAGIC ## Bronze Layer
-# MAGIC ##### customers feed -> banking.bronze.cbs_customer
+# MAGIC ###### customers feed -> banking.bronze.cbs_customer
 
 # COMMAND ----------
 
