@@ -16,14 +16,8 @@ Goals:
 
 ## Architecture
 
-```text
-Core banking (T24 / Finacle)  ->  Azure Data Factory (nightly)  ->  ADLS Gen2  data/staging/<entity>/
-                                     (simulated here by uploading the CSVs in raw_data/)
-                                                     |
-                                     Auto Loader (bronze)  ->  MERGE + PII masking (silver)  ->  KPIs (gold)
-                                                     |
-                                     Genie space  ·  AI/BI dashboard  ·  Databricks One
-```
+<img width="778" height="584" alt="image" src="https://github.com/user-attachments/assets/308d14ee-2ac8-42a9-96cb-8a1d9fb7cd34" />
+
 
 - **Storage:** ADLS Gen2 with containers `metastore-root`, `data`, `catalog-location`
 - **Governance:** Unity Catalog, catalog `banking`, schemas `bronze`, `silver`, `gold`
@@ -64,12 +58,12 @@ azure-databricks-najd-bank-redelinquency/
 ├── gold/
 │   └── redelinquency_analysis.py
 ├── raw_data/
-│   ├── customer_raw.csv        # 20 customers
-│   ├── branch_raw.csv          # 15 branches
-│   ├── branch_raw_2.csv        # 2nd delivery: new branch BR016
-│   ├── product_raw.csv         # 15 products
-│   ├── product_raw_2.csv       # 2nd delivery: HF02 description change
-│   └── repayment_raw.csv       # 30 delinquency events
+│   ├── customer_raw.csv        
+│   ├── branch_raw.csv          
+│   ├── branch_raw_2.csv        
+│   ├── product_raw.csv         
+│   ├── product_raw_2.csv       
+│   └── repayment_raw.csv       
 ├── resources/
 │   └── job.yml                 # Lakeflow Job (relative notebook paths)
 ├── databricks.yml              # Asset Bundle: dev and prod targets
@@ -202,7 +196,3 @@ ORDER BY due_month;
 | `cannot configure default credentials` | Replace the `<workspace-host>` placeholder in `databricks.yml`; check `databricks current-user me` |
 | `notebook ... not found` in bundle validate | Add the file extension (`.py`) to every `notebook_path` |
 | No metastore / `OPERATION_REQUIRES_UNITY_CATALOG` | Create or assign a Unity Catalog metastore to the workspace |
-
-## Credits
-
-The approach and step order follow [Azure-Databricks-Real-World-Healthcare-End-to-End-Project](https://github.com/anirvandecodes/Azure-Databricks-Real-World-Healthcare-End-to-End-Project), adapted from hospital readmissions to retail-banking re-delinquency.
