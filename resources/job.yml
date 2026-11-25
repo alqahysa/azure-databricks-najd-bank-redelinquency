@@ -24,17 +24,17 @@ resources:
           depends_on:
             - task_key: bronze_branches
           notebook_task:
-            notebook_path: ../silver/dim_branch_ingestion.py
+            notebook_path: ../silver/dim_branch_ingestion.ipynb
         - task_key: silver_dim_customer
           depends_on:
             - task_key: bronze_customers
           notebook_task:
-            notebook_path: ../silver/dim_customer_ingestion.py
+            notebook_path: ../silver/dim_customer_ingestion.ipynb
         - task_key: silver_dim_product
           depends_on:
             - task_key: bronze_products
           notebook_task:
-            notebook_path: ../silver/dim_product_ingestion.py
+            notebook_path: ../silver/dim_product_ingestion.ipynb
         - task_key: silver_fact_repayment
           depends_on:
             - task_key: bronze_repayments
@@ -42,7 +42,7 @@ resources:
             - task_key: silver_dim_customer
             - task_key: silver_dim_product
           notebook_task:
-            notebook_path: ../silver/fact_repayment_ingestion.py
+            notebook_path: ../silver/fact_repayment_ingestion.ipynb
         - task_key: gold_redelinquency
           depends_on:
             - task_key: silver_fact_repayment
