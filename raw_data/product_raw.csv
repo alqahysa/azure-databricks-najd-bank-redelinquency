@@ -1,0 +1,16 @@
+product_code,product_desc,product_type,shariah_structure
+PF01,Personal Finance - Government Salaried,Personal Finance,Tawarruq
+PF02,Personal Finance - Private Sector Salaried,Personal Finance,Tawarruq
+PF03,Personal Finance - Retirees,Personal Finance,Tawarruq
+PF04,Personal Finance - Debt Buyout,Personal Finance,Tawarruq
+AF01,Auto Finance - New Vehicle,Auto Finance,Murabaha
+AF02,Auto Finance - Used Vehicle,Auto Finance,Murabaha
+AF03,Auto Lease - New Vehicle,Auto Finance,Ijara
+AF04,Auto Lease - Balloon Payment,Auto Finance,Ijara
+CC01,Classic Credit Card,Credit Card,Tawarruq
+CC02,Gold Credit Card,Credit Card,Tawarruq
+CC03,Platinum Credit Card,Credit Card,Tawarruq
+CC04,Signature Credit Card,Credit Card,Tawarruq
+HF01,Home Finance - Ready Unit,Home Finance,Murabaha
+HF02,Home Finance - Off-Plan,Home Finance,Ijara
+HF03,Home Finance - Self Construction,Home Finance,Ijara
