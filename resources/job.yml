@@ -9,32 +9,32 @@ resources:
       tasks:
         - task_key: bronze_branches
           notebook_task:
-            notebook_path: ../bronze/branches_raw_data_ingestion.ipynb
+            notebook_path: ../bronze/branches_raw_data_ingestion.py
         - task_key: bronze_customers
           notebook_task:
-            notebook_path: ../bronze/customers_raw_data_ingestion.ipynb
+            notebook_path: ../bronze/customers_raw_data_ingestion.py
         - task_key: bronze_products
           notebook_task:
-            notebook_path: ../bronze/products_raw_data_ingestion.ipynb
+            notebook_path: ../bronze/products_raw_data_ingestion.py
             source: WORKSPACE
         - task_key: bronze_repayments
           notebook_task:
-            notebook_path: ../bronze/repayments_raw_data_ingestion.ipynb
+            notebook_path: ../bronze/repayments_raw_data_ingestion.py
         - task_key: silver_dim_branch
           depends_on:
             - task_key: bronze_branches
           notebook_task:
-            notebook_path: ../silver/dim_branch_ingestion.ipynb
+            notebook_path: ../silver/dim_branch_ingestion.py
         - task_key: silver_dim_customer
           depends_on:
             - task_key: bronze_customers
           notebook_task:
-            notebook_path: ../silver/dim_customer_ingestion.ipynb
+            notebook_path: ../silver/dim_customer_ingestion.py
         - task_key: silver_dim_product
           depends_on:
             - task_key: bronze_products
           notebook_task:
-            notebook_path: ../silver/dim_product_ingestion.ipynb
+            notebook_path: ../silver/dim_product_ingestion.py
         - task_key: silver_fact_repayment
           depends_on:
             - task_key: bronze_repayments
@@ -42,7 +42,7 @@ resources:
             - task_key: silver_dim_customer
             - task_key: silver_dim_product
           notebook_task:
-            notebook_path: ../silver/fact_repayment_ingestion.ipynb
+            notebook_path: ../silver/fact_repayment_ingestion.py
         - task_key: gold_redelinquency
           depends_on:
             - task_key: silver_fact_repayment
