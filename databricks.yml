@@ -9,10 +9,10 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://<workspace-host>
+      host: https://adb-7405609324445932.12.azuredatabricks.net/
 
   prod:
     mode: production
     workspace:
-      host: https://<workspace-host>
+      host: https://adb-7405609324445932.12.azuredatabricks.net/
       root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
